@@ -1,0 +1,31 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@using Umbraco.Cms.Core.Models.Blocks;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    var page = Model.Root();
+    var currentPage = Umbraco.AssignedContentItem;
+}
+<!DOCTYPE html>
+<html lang="da">
+
+
+
+<body style="margin: 0;">
+    <render-script position="BodyTop"></render-script>
+
+    <noscript>
+        <div style="border: 1px solid purple; padding: 10px">
+            <span style="color:red">JavaScript er ikke aktiveret! Siden vil ikke fungere uden javascript</span>
+        </div>
+    </noscript>
+    <partial name="Partials/Master/Navbar" model="currentPage" />
+    @RenderBody()
+</body>
+</html>
+
+<style>
+    body{
+        font-family: Arial, sans-serif;
+    }
+</style>

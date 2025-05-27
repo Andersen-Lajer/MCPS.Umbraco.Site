@@ -1,0 +1,17 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Homepage>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+
+@{
+    Layout = "Master.cshtml";
+}
+
+<section style="display: flex; justify-content: center;">
+    <div style="width: 1200px; display: flex; flex-direction: column; align-items: center;">
+        <h1>VELKOMMEN</h1>
+        <span>Follow the instructions in the MCPS projects ReadMe to begin using the package!</span>
+        <div style="width: 100%">
+            @await Html.GetBlockGridHtmlAsync(Model, "blockgrid")
+        </div>
+    </div>
+</section>

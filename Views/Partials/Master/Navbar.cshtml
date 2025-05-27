@@ -1,0 +1,19 @@
+﻿@using Umbraco.Cms.Core.Models.Blocks;
+@using Umbraco.Cms.Core.Models;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+
+@{
+    var root = (ContentModels.Homepage)Model.Root();
+}
+
+<header style="background-color: #283a97; display: flex; justify-content: center; padding: 20px 0;">
+    <div style="width: 1200px">
+        <div style="display: flex; justify-content: space-between;">
+            <span style="color: white; font-weight: 700;">MCPS</span>
+            <span style="color: white; font-weight: 700;">Umbraco Test site | Bachelor projekt</span>
+            <span><a style="color: white;  font-weight: 700;" target="_blank" href="https://github.com/orgs/Andersen-Lajer/repositories">MCPS GITHUB</a></span>
+            <span><a style="color: white;  font-weight: 700;" target="_blank" href="https://github.com/orgs/Andersen-Lajer/repositories">Test Site GITHUB</a></span>
+        </div>
+    </div>
+</header>
