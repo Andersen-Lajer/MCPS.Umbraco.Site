@@ -17,16 +17,7 @@
             data-row-span="@item.RowSpan"
             style=" --umb-block-grid--item-column-span: @item.ColumnSpan; --umb-block-grid--item-row-span: @item.RowSpan; ">
             @{
-                string partialViewName = "";
-                if (item.Content.ContentType.Alias.ToLower().StartsWith("mcps"))
-                {
-                    partialViewName = "McpsBlocks/" + item.Content.ContentType.Alias;
-                }
-                else
-                {
-                    partialViewName = "blockgrid/Components/" + item.Content.ContentType.Alias;
-                }
-                
+                var partialViewName = "blockgrid/Components/" + item.Content.ContentType.Alias;
                 try
                 {
                     @await Html.PartialAsync(partialViewName, item)
