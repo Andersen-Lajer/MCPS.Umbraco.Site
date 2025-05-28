@@ -8,8 +8,20 @@
 
 <section style="display: flex; justify-content: center;">
     <div style="width: 1200px; display: flex; flex-direction: column; align-items: center;">
-        <h1>VELKOMMEN</h1>
+        <h1>WELCOME</h1>
         <span>Follow the instructions in the MCPS projects ReadMe to begin using the package!</span>
+        <div style="display: flex; justify-content: space-between; margin: 20px 0;">
+            <div style="width: 45%; display: flex; flex-direction: column;">
+                <b>To create articles, head to the content section.</b>
+                <span>&#x2022; Locate the articles node in the content tree.</span>
+                <span>&#x2022; Simply click the + to add a new article.</span>
+            </div>
+            <div style ="width: 45%; display: flex; flex-direction: column;">
+                <b>To start propagating content, head to the settings section.</b>
+                <span>&#x2022; Find the homepage document type and click the blockgrid.</span>
+                <span>&#x2022; Simply add the propagtion block you wish (given any have been created in the MCPS section).</span>
+            </div>
+        </div>
         <div style="width: 100%; display: flex; justify-content: space-between; flex-wrap: wrap;">
             @await Html.GetBlockGridHtmlAsync(Model, "blockgrid")
         </div>
